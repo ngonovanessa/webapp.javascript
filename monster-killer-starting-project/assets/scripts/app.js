@@ -42,13 +42,13 @@ const monsterAttackValue=14;
     const playerDamage=dealPlayerDamage(monsterAttackValue); 
    currentPlayerHealth-=playerDamage;
   
-  if (currentMonsterHealth<=0 && currentMonsterHealth>0){
+  if (currentMonsterHealth<=0 && currentPlayerHealth>0){
    alert("yoo");
-  } else if (currentMonsterHealth<=0 && currentMonsterHealth >0){
+  } else if (currentPlayerHealth<=0 && currentMonsterHealth >0){
       alert("bb");
-   } else {
-         console.log("Try doing again");
-      }
+   } else if(currentMonsterHealth<=0 && currentPlayerHealth<=0) {
+alert("draw")
+   }
    }
      attackBtn.addEventListener("click", attackHandler);
    
